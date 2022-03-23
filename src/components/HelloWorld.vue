@@ -6,16 +6,7 @@
       </div>
       <div class="header-right" >
         <ul>
-          <li><a href="#">CHARACTERS</a></li>
-          <li><a href="#"> COMICS </a></li>
-          <li><a href="#"> MOVIE </a></li>
-          <li><a href="#"> TV </a></li>
-          <li><a href="#"> GAMES </a></li>
-          <li><a href="#"> COLLECTIBLES</a> </li>
-          <li><a href="#"> VIDEOS </a></li>
-          <li><a href="#"> FANS </a></li>
-          <li><a href="#"> NEWS </a></li>
-          <li><a href="#"> SHOP </a></li>
+          <li v-for="(links,index) in list" :key="index" ><a href="#">{{list[index].address}}</a></li>
         </ul>
       </div>
     </header>
@@ -25,8 +16,50 @@
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
+  data () {
+    return {
+      list: [{
+        address: 'CHARACTERS',
+        link: '#'
+      },
+      {
+        address: 'COMICS',
+        link: '#'
+      },
+      {
+        address: 'MOVIE',
+        link: '#'
+      },
+      {
+        address: 'TV',
+        link: '#'
+      },
+      {
+        address: 'GAMES',
+        link: '#'
+      },
+      {
+        address: 'COLLECTIBLES',
+        link: '#'
+      },
+      {
+        address: 'VIDEOS',
+        link: '#'
+      },
+      {
+        address: 'FANS',
+        link: '#'
+      },
+      {
+        address: 'NEWS',
+        link: '#'
+      },
+      {
+        address: 'SHOP',
+        link: '#'
+      }
+      ]
+    }
   }
 }
 </script>
@@ -34,6 +67,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 header {
+  background-color: white;
   margin-top: 20px;
   display: flex;
   margin-top: 0;
