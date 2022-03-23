@@ -2,18 +2,21 @@
   <div id="app">
     <HelloWorld/>
     <BlackLine/>
+    <BlueLine/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import BlackLine from './components/BlackLine.vue'
+import BlueLine from './components/BlueLine.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    BlackLine
+    BlackLine,
+    BlueLine
   }
 }
 </script>
