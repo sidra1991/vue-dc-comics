@@ -3,6 +3,7 @@
     <HelloWorld/>
     <BlackLine/>
     <BlueLine/>
+    <FooterDc/>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import HelloWorld from './components/HelloWorld.vue'
 import BlackLine from './components/BlackLine.vue'
 import BlueLine from './components/BlueLine.vue'
+import FooterDc from './components/FooterDc.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     BlackLine,
-    BlueLine
+    BlueLine,
+    FooterDc
   }
 }
 </script>
