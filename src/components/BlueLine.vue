@@ -7,32 +7,36 @@
 </template>
 
 <script>
+import digitalComicsImageSquare from '../assets/img/buy-comics-digital-comics.png'
+import digitalComicsImageshirt from '../assets/img/buy-comics-merchandise.png'
+import digitalComicsImageCard from '../assets/img/buy-comics-subscriptions.png'
+import digitalComicsImageGps from '../assets/img/buy-comics-comics.png'
 export default {
   name: 'BlueLine',
   data () {
     return {
       list: [{
-        address: '../assets/img/buy-comics-digital-comics.png',
+        address: digitalComicsImageSquare,
         content: 'DIGITAL COMICS',
         link: '#'
       },
       {
-        address: '../assets/img/buy-comics-digital-comics.png',
+        address: digitalComicsImageshirt,
         content: 'DC MERCHANDISE',
         link: '#'
       },
       {
-        address: '../assets/img/buy-comics-digital-comics.png',
+        address: digitalComicsImageCard,
         content: 'SUBSCRIPTION',
         link: '#'
       },
       {
-        address: '../assets/img/buy-comics-digital-comics.png',
+        address: digitalComicsImageGps,
         content: 'COMIC SHOP LOCATOR',
         link: '#'
       },
       {
-        address: '../assets/img/buy-comics-digital-comics.png',
+        address: '',
         content: 'DC POWER VISA',
         link: '#'
       }
