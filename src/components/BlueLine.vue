@@ -1,7 +1,7 @@
 <template>
   <div class="blue-line">
     <ul>
-      <li v-for="(links,index) in list" :key="index"  > <img :src="list[index].address" :alt="list[index].content"> <a :href="list[index].link">{{list[index].content}}</a> </li>
+      <li v-for="(links,index) in list" :key="index"  > <img v-if=" list[index].address != '' " :src="list[index].address" :alt="list[index].content"> <div class="svg" v-if=" list[index].address == '' " >{{list[index].alternative}}</div>  <a :href="list[index].link">{{list[index].content}}</a> </li>
     </ul>
   </div>
 </template>
@@ -10,7 +10,8 @@
 import digitalComicsImageSquare from '../assets/img/buy-comics-digital-comics.png'
 import digitalComicsImageshirt from '../assets/img/buy-comics-merchandise.png'
 import digitalComicsImageCard from '../assets/img/buy-comics-subscriptions.png'
-import digitalComicsImageGps from '../assets/img/buy-comics-comics.png'
+import digitalComicsImageGps from '../assets/img/buy-comics-shop-locator.png'
+import svgPazza from '../assets/img/buy-dc-power-visa.svg'
 export default {
   name: 'BlueLine',
   data () {
@@ -37,6 +38,7 @@ export default {
       },
       {
         address: '',
+        alternative: svgPazza,
         content: 'DC POWER VISA',
         link: '#'
       }
